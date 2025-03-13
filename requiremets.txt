@@ -1,3 +1,4 @@
 openai
 python-dotenv
 dataclasses-json
+jinja2
