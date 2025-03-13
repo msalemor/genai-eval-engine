@@ -9,6 +9,8 @@ async def evaluate(eval_data: EvaluationData) -> dict:
     # Load the base, expected, and actual outputs
     criteria = eval_data.criteria
     system = eval_data.system.replace("<CRITERIA>", criteria)
+    # with Jinja2 templates
+    # system = render_template(eval_data.system, criteria=criteria)
     user_tempate = eval_data.user
 
     for data in eval_data.data:
