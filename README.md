@@ -1,6 +1,6 @@
 # GenAI Evaluation Engine
 
-An a dynamic model evaluation engine that compares baseline text against generated text.
+An a dynamic GenAI evaluation engine that compares baseline text against generated text for multiple criteria. The system prompt, criteria, and evaluation prompts are customizble to suite any criteria evaluation.
 
 ## Evalulation JSON data
 
@@ -34,11 +34,11 @@ Write two similar sentences about Azure API Management. Make the second one uncl
 
 Results:
 1. Azure API Management is a platform that helps developers manage APIs by providing tools for security, monitoring, and scaling.
-2.Azure API Management, being a thing with APIs and management, does the managing of APIs in a way that involves stuff like policies, gateways, and maybe clouds, but also other things that are important for APIs to be managed, somehow.
+2. Azure API Management, being a thing with APIs and management, does the managing of APIs in a way that involves stuff like policies, gateways, and maybe clouds, but also other things that are important for APIs to be managed, somehow.
 ```
 
 
-### Actua run results
+### Actual run results
 
 ```text
 Baseline: The water is clear.
