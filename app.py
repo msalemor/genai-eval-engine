@@ -1,14 +1,13 @@
 import asyncio
-from evaluator.utils.evaldata import EvaluationData
-from evaluator.utils.openaihelper import completion
-from evaluator.evaluator import evaluate, read_file
+from evaluator.utils.evaldata import EvaluationData, load_evaluation_data
+from evaluator.evaluator import evaluate
 
 
 async def main():
     # Load the evaluation JSON file in an EvaluationData object
     # file contains the evaluation prompts and the data
-    evaluation_data = EvaluationData.from_json(read_file(
-        "/home/alex/github/msalemor/genai-eval-engine/sample_evaluation.json"))
+    evaluation_data: EvaluationData = load_evaluation_data(
+        "/home/alex/github/msalemor/genai-eval-engine/sample_evaluation.json")
 
     # Perform the evaluation
     await evaluate(evaluation_data)

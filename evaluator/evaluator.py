@@ -26,9 +26,9 @@ async def evaluate(eval_data: EvaluationData) -> dict:
     for data in eval_data.data:
         # Prepare the messages
         baseline = data["baseline"]
-        expected = data["output"]
+        output = data["output"]
         user_content = user_tempate.replace("<BASELINE>", baseline)
-        user_content = user_content.replace("<OUTPUT>", expected)
+        user_content = user_content.replace("<OUTPUT>", output)
         messages = [
             {"role": "system", "content": system},
             {"role": "user", "content": user_content},
@@ -38,6 +38,6 @@ async def evaluate(eval_data: EvaluationData) -> dict:
         res = await completion(messages)
 
         # Print the results
-        print("Baseline:", baseline)
-        print("Output:", expected)
-        print(f"Evaluation results:\n{res}")
+        print(f"Baseline: {baseline}")
+        print(f"Output: {output}")
+        print(f"Evaluation results:\n{res}\n\n")
