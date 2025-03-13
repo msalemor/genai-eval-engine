@@ -35,6 +35,7 @@ async def evaluate(eval_data: EvaluationData) -> dict:
         ]
 
         # Get the evaluation completion
+        # compare: baseline vs output against the criteria
         res = await completion(messages)
 
         # Print the results
