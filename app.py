@@ -7,11 +7,11 @@ from evaluator.evaluator import evaluate, read_file
 async def main():
     # Load the evaluation JSON file in an EvaluationData object
     # file contains the evaluation prompts and the data
-    ec = EvaluationData.from_json(read_file(
+    evaluation_data = EvaluationData.from_json(read_file(
         "/home/alex/github/msalemor/genai-eval-engine/sample_evaluation.json"))
 
     # Perform the evaluation
-    await evaluate(ec)
+    await evaluate(evaluation_data)
 
 
 if __name__ == '__main__':
