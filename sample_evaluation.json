@@ -1,0 +1,15 @@
+{
+    "system": "You are an AI that can help evaluate a baseline text agaisnt an output text. Use the following criteria for the evaluation:\n\n<CRITERIA>\nScore the criteria from 1-10 with 10 being the best score. Respond in JSON format only. No epilogue or prologue is needed.",
+    "criteria": "Clarity\nConciseness\nCorrectness\nCompleteness\nConsistency\nCoherence\n",
+    "user": "Baseline:\n\n<BASELINE>\n\nOutput:\n\n<OUTPUT>\n\n",
+    "data": [
+        {
+            "baseline": "The water is clear.",
+            "output": "The water is translucent."
+        },
+        {
+            "baseline": "Azure API Management is a multifaceted platform designed to facilitate the orchestration, governance, and operational oversight of API ecosystems, encompassing a myriad of functionalities that cater to diverse integration scenarios and security paradigms.",
+            "output": "Azure API Management, being a thing with APIs and management, does the managing of APIs in a way that involves stuff like policies, gateways, and maybe clouds, but also other things that are important for APIs to be managed, somehow."
+        }
+    ]
+}
