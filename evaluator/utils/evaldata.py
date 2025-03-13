@@ -12,6 +12,10 @@ class EvaluationData:
 
 
 def load_evaluation_data(file_path: str) -> EvaluationData:
-    with open(file_path, 'r') as f:
-        data = f.read()
-    return EvaluationData.from_json(data)
+    try:
+        with open(file_path, 'r') as f:
+            data = f.read()
+        return EvaluationData.from_json(data)
+    except Exception as e:
+        print(f"Error loading evaluation data: {e}")
+        exit(1)

@@ -1,17 +1,5 @@
-import asyncio
-import json
-from typing import Any
-
 from evaluator.utils.evaldata import EvaluationData
 from evaluator.utils.openaihelper import completion
-
-
-def read_file(path: str) -> dict:
-    """
-    Load the evaluation file.
-    """
-    with open(path, "r") as file:
-        return file.read()
 
 
 async def evaluate(eval_data: EvaluationData) -> dict:
