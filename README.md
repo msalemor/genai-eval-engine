@@ -2,13 +2,19 @@
 
 An a dynamic GenAI evaluation engine that compares baseline text against generated text for multiple criteria. The system prompt, criteria, and evaluation prompts are customizble to suite any criteria evaluation.
 
+## OpenAI Configuration
+
+```json
+response_format={"type": "json_object"}
+```
+
 ## Evalulation JSON data
 
 > Note: The criteria here is for Clarity, Conciseness, etc., but this could change depending the required evaluation.
 
 ```json
 {
-    "system": "You are an AI that can help evaluate a baseline text agaisnt an output text. Use the following criteria for the evaluation:\n\n<CRITERIA>\nScore the criteria from 1-10 with 10 being the best score. Respond in JSON format only. No epilogue or prologue is needed.",
+    "system": "You are an AI that can help evaluate a baseline text agaisnt an output text. Use the following criteria for the evaluation:\n\n<CRITERIA>\nScore the criteria from 1-10 with 10 being the best score. Use only the provide text. Respond in JSON format only.",
     "criteria": "Clarity\nConciseness\nCorrectness\nCompleteness\nConsistency\nCoherence\n",
     "user": "Baseline:\n\n<BASELINE>\n\nOutput:\n\n<OUTPUT>\n\n",
     "data": [
@@ -27,16 +33,16 @@ An a dynamic GenAI evaluation engine that compares baseline text against generat
 ## Sample run
 
 ### Sample data generation
+
 ```text
-Copilot baseline generation:
+Copilot:
 
 Write two similar sentences about Azure API Management. Make the second one unclear and incoherent.
 
-Results:
+Copilot Result:
 1. Azure API Management is a platform that helps developers manage APIs by providing tools for security, monitoring, and scaling.
 2. Azure API Management, being a thing with APIs and management, does the managing of APIs in a way that involves stuff like policies, gateways, and maybe clouds, but also other things that are important for APIs to be managed, somehow.
 ```
-
 
 ### Actual run results
 
