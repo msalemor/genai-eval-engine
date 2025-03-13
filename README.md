@@ -1,8 +1,10 @@
 # GenAI Evaluation Engine
 
-An a dynamic model evaluation engine
+An a dynamic model evaluation engine that compares baseline text against generated text.
 
 ## Evalulation JSON data
+
+> Note: The criteria here is for Clarity, Conciseness, etc., but this could change depending the required evaluation.
 
 ```json
 {
