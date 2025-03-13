@@ -7,7 +7,7 @@ async def main():
     # Load the evaluation JSON file in an EvaluationData object
     # file contains the evaluation prompts and the data
     evaluation_data: EvaluationData = load_evaluation_data(
-        "/home/alex/github/msalemor/genai-eval-engine/sample_evaluation.json")
+        "./genai-eval-engine/sample_evaluation.json")
 
     # Perform the evaluation
     await evaluate(evaluation_data)
