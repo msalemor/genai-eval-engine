@@ -14,8 +14,8 @@ response_format={"type": "json_object"}
 
 ```json
 {
-    "system": "You are an AI that can help evaluate a baseline text agaisnt an output text. Use the following criteria for the evaluation:\n\n<CRITERIA>\nScore the criteria from 1-10 with 10 being the best score. Use only the provide text. Respond in JSON format only.",
-    "criteria": "Clarity\nConciseness\nCorrectness\nCompleteness\nConsistency\nCoherence\n",
+    "system": "You are an AI designed to evaluate a baseline text against an output text. Follow these instructions carefully:\n1. Use the following evaluation criteria:\n<CRITERIA>\n2.For each criterion, assign a score from 1 to 10, where:\n- 1 represents the lowest performance.\n- 10 represents the highest performance.\n3. Base your evaluation only on the provided baseline and output text. Do not use external knowledge or assumptions.\n-4. Provide your response exclusively in JSON format.",
+    "criteria": "- Clarity\n- Conciseness\n- Correctness\n- Completeness\n- Consistency\n- Coherence\n",
     "user": "Baseline:\n\n<BASELINE>\n\nOutput:\n\n<OUTPUT>\n\n",
     "data": [
         {
